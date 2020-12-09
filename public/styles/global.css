@@ -19,6 +19,9 @@
     --color-page-text: rgb(43, 41, 85);
     --color-page-text-light: rgb(152, 166, 215);
 
+    --color-page-logo: var(--color-page-text-light);
+    --color-page-logo-hover: var(--color-page-text);
+
     --color-aside-background: #f4f7fe;
     --color-main-background: #ffffff;
 
@@ -36,6 +39,9 @@
     :root {
         --color-page-text: rgb(255, 255, 255);
         --color-page-text-light: rgb(161, 167, 187);
+
+        --color-page-logo: rgb(97, 136, 255);
+        --color-page-logo-hover: var(--color-page-text-light);
 
         --color-aside-background: rgb(52, 54, 69);
         --color-main-background: rgb(36, 38, 49);
@@ -101,7 +107,7 @@ a:hover {
 
 h2 {
     font-size: 1.6rem;
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 h3 {
     color: var(--color-page-text-light);
@@ -109,7 +115,6 @@ h3 {
     line-height: 1.4rem;
     font-weight: normal;
     display: block;
-    margin-top: 1rem;
 }
 
 input::-webkit-outer-spin-button,

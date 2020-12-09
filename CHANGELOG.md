@@ -1,6 +1,10 @@
 ## PayNow | Changelog
 
 
+### 1.2.0 (2020-12-10)
+* Update app icons
+* Logo @ page header
+
 ### 1.1.0 (2020-12-09)
 * Highlight required fields
 * Add todos to the Readme

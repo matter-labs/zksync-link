@@ -112,16 +112,21 @@
 
     form {
         width: 100%;
-        padding: 2rem 1rem;
+        padding: 1rem;
     }
 
     header {
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
-
-    h3 span {
-        display: block;
+    header article {
+        margin: .5rem 0 0;
+        pointer-events: none;
+    }
+    header svg {
+        fill: var(--color-page-logo);
+        width: 2rem;
+        height: 2rem;
     }
 
     fieldset {
@@ -162,14 +167,17 @@
     input::placeholder {
         color: var(--color-input-placeholder);
     }
-    input[readonly] {
-        cursor: default;
-    }
+
+    select:hover,
     input:hover {
         background-color: transparent;
         border-color: var(--color-input-border-hover);
     }
 
+    select[readonly],
+    input[readonly] {
+        cursor: default;
+    }
     select:invalid,
     input:invalid {
         border-color: var(--color-input-border-hover);
@@ -296,11 +304,23 @@
         header {
             text-align: left;
             margin-bottom: 6rem;
-            padding-left: 1.5rem;
+            margin-left: 1.5rem;
+            display: flex;
         }
-
-        h3 span {
-            display: inline-block;
+        header svg {
+            width: 4rem;
+            height: 4rem;
+            display: block;
+            transition: fill .25s;
+        }
+        header svg:hover {
+            fill: var(--color-page-logo-hover);
+        }
+        header article {
+            margin: 0 0 0 1.5rem;
+        }
+        header h3 {
+            margin-top: .2rem;
         }
     }
 </style>
@@ -308,20 +328,32 @@
 <main>
     <form bind:this={form} on:submit|preventDefault={checkout ? zkCheckout : create}>
         <header>
-            <h2>
-                {#if checkout}
-                    Make a payment
-                {:else}
-                    Create a payment link
-                {/if}
-            </h2>
-            <h3>
-                {#if checkout}
-                    <span>Fast, secure,</span> ultra-low transaction fee
-                {:else}
-                    <span>Accepting payments</span> is now just a link away
-                {/if}
-            </h3>
+            <a href="{HOME_URL}" title="PayNow">
+                <svg viewBox="0 0 393 392" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="m214.147 207.039c-5.613 19.181-21.23 33.669-40.757 37.813-29.202 6.202-58.008-12.521-64.205-41.727s12.521-58.009 41.727-64.206c8.104-1.719 13.279-9.683 11.56-17.786-1.72-8.104-9.683-13.284-17.787-11.56-45.387 9.631-74.477 54.392-64.846 99.778 8.387 39.525 43.41 66.688 82.293 66.688 5.767 0 11.624-.599 17.486-1.843 30.34-6.437 54.604-28.942 63.322-58.732 2.327-7.95-2.232-16.282-10.184-18.609-7.949-2.321-16.282 2.233-18.609 10.184z"/>
+                        <path d="m198.131 125.633c-28.867 11.763-48.867 38.338-52.194 69.355-.883 8.236 5.078 15.63 13.314 16.514 8.238.884 15.631-5.077 16.515-13.314 2.148-20.025 15.056-37.182 33.685-44.771 27.866-11.354 59.771 2.079 71.124 29.943 5.5 13.498 5.414 28.33-.242 41.764-5.655 13.434-16.204 23.86-29.701 29.359-7.672 3.126-11.357 11.88-8.231 19.552 2.371 5.818 7.978 9.344 13.896 9.344 1.885 0 3.802-.357 5.654-1.112 20.919-8.523 37.267-24.684 46.032-45.502 8.765-20.819 8.897-43.806.374-64.725-17.594-43.184-67.04-63.997-110.226-46.407z"/>
+                        <path d="m310.724.929h-228.828c-45.158 0-81.896 36.738-81.896 81.896v226.97c0 45.157 36.738 81.896 81.896 81.896h228.828c45.158 0 81.896-36.738 81.896-81.896v-226.97c0-45.158-36.739-81.896-81.896-81.896zm51.896 308.866c0 28.615-23.28 51.896-51.896 51.896h-228.828c-28.616 0-51.896-23.281-51.896-51.896v-226.97c0-28.616 23.28-51.896 51.896-51.896h228.828c28.616 0 51.896 23.28 51.896 51.896z"/>
+                    </g>
+                </svg>
+            </a>
+
+            <article>
+                <h2>
+                    {#if checkout}
+                        Make a payment
+                    {:else}
+                        Create a payment link
+                    {/if}
+                </h2>
+                <h3>
+                    {#if checkout}
+                        <span>Fast, secure,</span> ultra-low transaction fees
+                    {:else}
+                        <span>Accepting payments</span> is just a link away
+                    {/if}
+                </h3>
+            </article>
         </header>
 
         <fieldset>
