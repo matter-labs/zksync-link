@@ -1,5 +1,5 @@
 <p align="center">
-    <b>Pay Now</b>
+    <b>PayNow</b>
     <br>
     Create payment links, get paid in tokens
 </p>
@@ -23,11 +23,18 @@ Accept payments instantly using payment links (provided by [zkSync](https://zksy
 * No DB, no 3rd-party dependencies
 * Performance optimized application
 
-#### UI
+#### User Interface
 * Usability tested
 * Full responsive layout
 * Flat & clean user interface
 * Dark / Light themes (auto switch)
+
+#### Todos
+* CI tests
+* Additional infos
+* QR Code generator
+* Social Media links
+* `semanticType: FeeOrCommission`
 
 #### Illustration
 * Created by [pch.vector](https://www.freepik.com)

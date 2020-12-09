@@ -119,3 +119,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -webkit-appearance: textfield;
 }
+
+input:required {
+    box-shadow: none;
+}
