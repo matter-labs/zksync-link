@@ -117,7 +117,7 @@
 
     header {
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     h3 span {
@@ -165,9 +165,18 @@
     input[readonly] {
         cursor: default;
     }
-    input:not([readonly]):hover {
+    input:hover {
         background-color: transparent;
         border-color: var(--color-input-border-hover);
+    }
+
+    select:invalid,
+    input:invalid {
+        border-color: var(--color-input-border-hover);
+    }
+
+    input[readonly]:hover {
+        pointer-events: none;
     }
 
     select {
@@ -196,7 +205,6 @@
         border-color: var(--color-page-text-light);
         background-color: transparent;
         padding: .6rem 1.3rem 0;
-        height: 6rem;
         word-break: break-all;
         line-height: 1.2rem;
         font-size: .9rem;
@@ -256,9 +264,16 @@
         margin-top: 4rem;
         text-align: center;
     }
+    footer,
     footer a {
-        display: block;
         color: var(--color-page-text-light);
+    }
+
+    footer span {
+        font-size: .8rem;
+        padding: 0 .8rem;
+    }
+    footer a {
         font-size: 1rem;
     }
 
@@ -270,9 +285,6 @@
         form {
             width: 38rem;
             padding: 2rem;
-        }
-        textarea {
-            height: 4rem;
         }
     }
     @media (min-width: 1024px) {
@@ -305,7 +317,7 @@
             </h2>
             <h3>
                 {#if checkout}
-                    Fast, secure, ultra-low transaction fee
+                    <span>Fast, secure,</span> ultra-low transaction fee
                 {:else}
                     <span>Accepting payments</span> is now just a link away
                 {/if}
@@ -363,7 +375,9 @@
         </fieldset>
 
         <footer>
-            <a href="https://zksync.io" target="_blank" rel="noopener">Provided by zkSync</a>
+            <a href="https://zksync.io">Provided by zkSync</a>
+            <span>|</span>
+            <a href="{HOME_URL}?MHgwNTM1NzY2RTc1RUUwNjAzZjQwZTg1MjBFZUFGQmNFOTQ0QTU3RjcyfHw">Donate to PayNow</a>
         </footer>
     </form>
 </main>

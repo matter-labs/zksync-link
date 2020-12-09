@@ -1,8 +1,8 @@
 {
     "name": "pay.now.sh",
     "private": true,
-    "description": "Pay Now - Create payment links, get paid in tokens",
-    "version": "1.0.0",
+    "description": "PayNow - Create payment links, get paid in tokens",
+    "version": "1.1.0",
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
