@@ -1,6 +1,9 @@
 ## PayNow | Changelog
 
 
+### 1.3.0 (2020-12-15)
+* Add social media sharing links
+
 ### 1.2.0 (2020-12-10)
 * Update app icons
 * Logo @ page header
