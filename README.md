@@ -11,14 +11,15 @@ Accept payments instantly using payment links (provided by [zkSync](https://zksy
 * [https://pay.now.sh](https://pay.now.sh)
 
 #### Example
-* [Sponsor the project](https://pay.now.sh/?MHgwNTM1NzY2RTc1RUUwNjAzZjQwZTg1MjBFZUFGQmNFOTQ0QTU3RjcyfHw)
+* [Sponsor this project](https://pay.now.sh/?MHgwNTM1NzY2RTc1RUUwNjAzZjQwZTg1MjBFZUFGQmNFOTQ0QTU3RjcyfHw)
 
 #### Features
 * Hand drafted frontend
 * Based on [zkSync Checkout](https://www.notion.so/zkSync-Checkout-docs-2bffd6f169e746d0b51873e4127992a6)
-* Sync available tokens from API
-* Copy payment link to clipboard
-* Update payment link on changes
+* Get available tokens from zkSync API
+* Copy the payment link to clipboard
+* Share the payment link on social media
+* Update the payment link on changes
 * En-/Decryption by `btoa` / `atob`
 * No DB, no 3rd-party dependencies
 * Performance optimized application
@@ -33,7 +34,6 @@ Accept payments instantly using payment links (provided by [zkSync](https://zksy
 * CI tests
 * Additional infos
 * QR Code generator
-* Social Media links
 * `semanticType: FeeOrCommission`
 
 #### Illustration
