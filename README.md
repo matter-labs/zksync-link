@@ -38,3 +38,11 @@ Accept payments instantly using payment links (provided by [zkSync](https://zksy
 
 #### Illustration credit
 * [pch.vector](https://www.freepik.com)
+
+#### Deployment
+
+```bash
+firebase deploy
+```
+
+Then clear cache.
