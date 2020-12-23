@@ -2,6 +2,7 @@
 
 ### 1.3.0 (2020-12-23)
 * Renaming to zkSync Link
+* Adding firebase deployment
 
 ### 1.3.0 (2020-12-15)
 * Add social media sharing links
