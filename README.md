@@ -41,8 +41,4 @@ Accept payments instantly using payment links (provided by [zkSync](https://zksy
 
 #### Deployment
 
-```bash
-firebase deploy
-```
-
-Then clear cache.
+On commit.
