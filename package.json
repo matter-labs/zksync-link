@@ -24,7 +24,7 @@
     },
     "dependencies": {
         "ethers": "^5.0.23",
-        "zksync-checkout": "^0.0.6"
+        "zksync-checkout": "^0.0.11"
     },
     "license": "MIT"
 }
