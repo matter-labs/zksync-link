@@ -425,8 +425,8 @@
         </fieldset>
 
         <footer>
-            <a href="https://zksync.io">Powered by zkSync</a>
-            <span>|</span>
+            <p>Powered by</p><br>
+            <a href="https://zksync.io"><img src="images/logo-dark.svg" width="200em"/></a>
         </footer>
     </form>
 </main>
