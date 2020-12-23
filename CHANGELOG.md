@@ -1,5 +1,7 @@
-## PayNow | Changelog
+## zkSync Link | Changelog
 
+### 1.3.0 (2020-12-23)
+* Renaming to zkSync Link
 
 ### 1.3.0 (2020-12-15)
 * Add social media sharing links

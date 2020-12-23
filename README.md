@@ -1,5 +1,5 @@
 <p align="center">
-    <b>PayNow</b>
+    <b>zkSync Link</b>
     <br>
     Create payment links, get paid in tokens
 </p>
@@ -8,7 +8,7 @@
 Accept payments instantly using payment links (provided by [zkSync](https://zksync.io)). Generate a link in one tap, copy your payment link and share it with your clients, friends and users to request payments and donations. 
 
 #### Application
-* [https://pay.now.sh](https://pay.now.sh)
+* [https://link.zksync.io](https://link.zksync.io)
 
 #### Example
 * [Sponsor this project](https://pay.now.sh/?MHgwNTM1NzY2RTc1RUUwNjAzZjQwZTg1MjBFZUFGQmNFOTQ0QTU3RjcyfHw)
@@ -36,7 +36,5 @@ Accept payments instantly using payment links (provided by [zkSync](https://zksy
 * QR Code generator
 * `semanticType: FeeOrCommission`
 
-#### Illustration
-* Created by [pch.vector](https://www.freepik.com)
-
-
+#### Illustration credit
+* [pch.vector](https://www.freepik.com)

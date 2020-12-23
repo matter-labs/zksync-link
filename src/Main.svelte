@@ -332,7 +332,7 @@
 <main>
     <form bind:this={form} on:submit|preventDefault={checkout ? zkCheckout : create}>
         <header>
-            <a href="{HOME_URL}" title="PayNow">
+            <a href="{HOME_URL}" title="zkSync Link">
                 <svg viewBox="0 0 393 392" xmlns="http://www.w3.org/2000/svg">
                     <g>
                         <path d="m214.147 207.039c-5.613 19.181-21.23 33.669-40.757 37.813-29.202 6.202-58.008-12.521-64.205-41.727s12.521-58.009 41.727-64.206c8.104-1.719 13.279-9.683 11.56-17.786-1.72-8.104-9.683-13.284-17.787-11.56-45.387 9.631-74.477 54.392-64.846 99.778 8.387 39.525 43.41 66.688 82.293 66.688 5.767 0 11.624-.599 17.486-1.843 30.34-6.437 54.604-28.942 63.322-58.732 2.327-7.95-2.232-16.282-10.184-18.609-7.949-2.321-16.282 2.233-18.609 10.184z"/>
@@ -425,9 +425,8 @@
         </fieldset>
 
         <footer>
-            <a href="https://zksync.io">Provided by zkSync</a>
+            <a href="https://zksync.io">Powered by zkSync</a>
             <span>|</span>
-            <a href="{HOME_URL}?MHgwNTM1NzY2RTc1RUUwNjAzZjQwZTg1MjBFZUFGQmNFOTQ0QTU3RjcyfHw">Donate to PayNow</a>
         </footer>
     </form>
 </main>

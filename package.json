@@ -1,7 +1,7 @@
 {
-    "name": "pay.now.sh",
+    "name": "link.zksync.io",
     "private": true,
-    "description": "PayNow - Create payment links, get paid in tokens",
+    "description": "zkSync Link - Create payment links, get paid in tokens",
     "version": "1.3.0",
     "scripts": {
         "build": "rollup -c",
