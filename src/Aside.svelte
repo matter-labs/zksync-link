@@ -38,7 +38,7 @@
 
 <aside>
     <h1>
-        Create payment links,
+        Create zkSync payment links,
         <br>
         get paid in tokens
     </h1>

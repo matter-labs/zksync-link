@@ -1,7 +1,7 @@
 <p align="center">
-    <b>zkSync Link</b>
+    <b>zkLink</b>
     <br>
-    Create payment links, get paid in tokens
+    Create zkSync payment links, get paid in tokens
 </p>
 
 #### Payment 3.0 made by you

@@ -128,3 +128,7 @@ input[type=number] {
 input:required {
     box-shadow: none;
 }
+
+.source-link {
+    font-size: 0.8rem!important;
+}

@@ -1,4 +1,8 @@
-## zkSync Link | Changelog
+## zkLink | Changelog
+
+### 1.3.1 (2020-12-23)
+* Renaming to zkLink
+* Adding link to Github sources
 
 ### 1.3.0 (2020-12-23)
 * Renaming to zkSync Link

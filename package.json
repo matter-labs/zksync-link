@@ -1,7 +1,7 @@
 {
     "name": "link.zksync.io",
     "private": true,
-    "description": "zkSync Link - Create payment links, get paid in tokens",
+    "description": "zkLink - Create zkSync payment links, get paid in tokens",
     "version": "1.3.0",
     "scripts": {
         "build": "rollup -c",
