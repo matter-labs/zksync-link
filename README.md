@@ -41,4 +41,4 @@ Accept payments instantly using payment links (provided by [zkSync](https://zksy
 
 #### Deployment
 
-On commit.
+On commit: see the Github workflows.
