@@ -2,6 +2,7 @@
     import { HOME_URL, TOKENS_API, TWEET_URL, SHARER_URL } from './Constants'
     import { CheckoutManager } from 'zksync-checkout'
     import { onMount } from 'svelte';
+    import { getDefaultProvider, utils } from 'ethers';
 
     let form;
     let select;
@@ -21,7 +22,7 @@
         const token = form.token.value;
         const amount = form.amount.value;
 
-        if (!to) {
+        if (!to || utils.isAddress(to) != true) {
             return link = '';
         }
 
@@ -62,13 +63,25 @@
         window.open(`${SHARER_URL}${encodeURIComponent(form.link.value)}`, '_blank');
     }
 
+    const resolveEnsName = async () => {
+        try {
+            const addressAfterResolve = await getDefaultProvider().resolveName(form.to.value);
+            if (addressAfterResolve) {
+                console.log('addressAfterResolve: ', addressAfterResolve);
+                return form.to.value = addressAfterResolve; 
+            }
+        } catch (error) {
+            console.warn(error);
+        }
+    }
+
     const zkCheckout = async () => {
         try {
             const to = form.to.value;
             const token = form.token.value;
             const quantity = form.amount.value;
 
-            if (!to || !token || !quantity) {
+            if (!to || !token || !quantity || utils.isAddress(to) != true) {
                 return;
             }
 
@@ -363,7 +376,7 @@
         <fieldset>
             <div class="to">
                 <legend>Receiver ETH address</legend>
-                <input type="text" name="to" on:input="{update}" value="{to}" readonly="{to}" placeholder="0x" autocapitalize="off" autocorrect="off" spellcheck="false" minlength="42" maxlength="42" required>
+                <input type="text" name="to" on:blur="{resolveEnsName}" value="{to}" readonly="{to}" placeholder="0x" autocapitalize="off" autocorrect="off" spellcheck="false" minlength="42" maxlength="42" required>
             </div>
         </fieldset>
 
