@@ -1,8 +1,6 @@
-<p align="center">
-    <b>zkLink</b>
-    <br>
-    Create zkSync payment links, get paid in tokens
-</p>
+# zkLink
+
+> Create zkSync payment links, get paid in tokens
 
 #### Payment 3.0 made by you
 Accept payments instantly using payment links (provided by [zkSync](https://zksync.io)). Generate a link in one tap, copy your payment link and share it with your clients, friends and users to request payments and donations. 
@@ -10,8 +8,9 @@ Accept payments instantly using payment links (provided by [zkSync](https://zksy
 #### Application
 * [https://link.zksync.io](https://link.zksync.io)
 
-#### Example
-* [Sponsor this project](https://pay.now.sh/?MHgwNTM1NzY2RTc1RUUwNjAzZjQwZTg1MjBFZUFGQmNFOTQ0QTU3RjcyfHw)
+#### Linked products
+* [zkCheckout](https://checkout.zksync.io)
+* [zkWallet](https://wallet.zksync.io)
 
 #### Features
 * Hand drafted frontend
@@ -36,8 +35,8 @@ Accept payments instantly using payment links (provided by [zkSync](https://zksy
 * QR Code generator
 * `semanticType: FeeOrCommission`
 
-#### Illustration credit
-* [pch.vector](https://www.freepik.com)
+#### Contribution
+* [pch.vector](https://www.freepik.com) ```Illustration credit```
 
 #### Deployment
 
