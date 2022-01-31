@@ -2,6 +2,7 @@
     import { HOME_URL, TOKENS_API, TWEET_URL, SHARER_URL } from './Constants'
     import { CheckoutManager } from 'zksync-checkout'
     import { onMount } from 'svelte';
+    import QRious from 'qrious'
 
     let form;
     let select;
@@ -9,6 +10,8 @@
     let tokens;
     let visible;
     let copied = 'copy';
+    let qrCodeEl
+    let qrcode
 
     export let to = '';
     export let token = '';
@@ -29,6 +32,13 @@
         const encoded = encodeURI(window.btoa(hash).replace(/=/g, ''));
 
         link = `${HOME_URL}?${encoded}`;
+
+        //create qr code
+        qrcode = new QRious({
+            element: qrCodeEl,
+            value: link,
+            size: 200
+        });
     }
 
     const create = () => {
@@ -36,6 +46,7 @@
 
         form.querySelector('.submit').classList.add('is-hidden');
         form.querySelector('.textarea').classList.remove('is-hidden');
+        form.querySelector('.qrcodediv').classList.remove('is-hidden');
 
         visible = true;
     }
@@ -85,6 +96,16 @@
         }
     }
 
+    const download = () => {
+        var imgURL = qrcode.toDataURL('image/jpeg');
+        var dwnLink = document.createElement('a');
+        dwnLink.download = 'zkSyncPaymentLink.png';
+        dwnLink.href = imgURL;
+        form.appendChild(dwnLink);
+        dwnLink.click();
+        form.removeChild(dwnLink);
+    }
+
     onMount(async () => {
         fetch(TOKENS_API)
         .then(response => response.json())
@@ -92,6 +113,7 @@
         .then(() => tokens.map(item => item.symbol).filter(symbol => !['ETH', 'DAI'].includes(symbol)).forEach(symbol => select.add(new Option(symbol))))
         .then(() => select.value = token)
         .catch(error => console.error('Fetch tokens error:', error));
+
     });
 </script>
 
@@ -225,6 +247,17 @@
         margin: 0 1.5rem;
         height: 2rem;
         line-height: 2rem;
+    }
+
+    .qrcodeimg {
+        display: block;
+        padding: 1.3rem 1.3rem 1.3rem;
+        border: 0.2rem solid var(--color-input-border);
+        border-color: var(--color-page-text-light);
+        background-color: transparent;
+        line-height: 1.2rem;
+        border-radius: 1rem;
+        transition: all .25s;
     }
 
     nav {
@@ -418,6 +451,21 @@
                         <small>share</small>
                         <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                             <path d="m75 512h167v-182h-60v-60h60v-75c0-41.355469 33.644531-75 75-75h75v60h-60c-16.542969 0-30 13.457031-30 30v60h87.292969l-10 60h-77.292969v182h135c41.355469 0 75-33.644531 75-75v-362c0-41.355469-33.644531-75-75-75h-362c-41.355469 0-75 33.644531-75 75v362c0 41.355469 33.644531 75 75 75zm-45-437c0-24.8125 20.1875-45 45-45h362c24.8125 0 45 20.1875 45 45v362c0 24.8125-20.1875 45-45 45h-105v-122h72.707031l20-120h-92.707031v-30h90v-120h-105c-57.898438 0-105 47.101562-105 105v45h-60v120h60v122h-137c-24.8125 0-45-20.1875-45-45zm0 0"/>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div class="qrcodediv is-hidden">
+                <legend>QR Code</legend>
+                <canvas bind:this={qrCodeEl} class="qrcodeimg" ></canvas>
+                <nav>
+                    <button type="button" on:click="{download}">
+                        <small>download</small>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 5v13M5 12l7 7 7-7"/>
                         </svg>
                     </button>
                 </nav>
