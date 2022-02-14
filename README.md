@@ -1,6 +1,8 @@
 # zkLink
 
-> Create zkSync payment links, get paid in tokens
+> Create zkSync payment links, get paid in tokens.
+
+**Archival notice**: Please use https://checkout.zksync.io moving forward.
 
 #### Payment 3.0 made by you
 Accept payments instantly using payment links (provided by [zkSync](https://zksync.io)). Generate a link in one tap, copy your payment link and share it with your clients, friends and users to request payments and donations. 
